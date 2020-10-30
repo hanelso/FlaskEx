@@ -5,6 +5,10 @@ from models import db
 
 app = Flask(__name__ )
 
+@app.route('/register')     # app의 main route가 '/'가 된다는 것이다.
+def register():
+    return render_template("register.html")
+
 @app.route('/')     # app의 main route가 '/'가 된다는 것이다.
 def hello():
     return render_template("hello.html")
